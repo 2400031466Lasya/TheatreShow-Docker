@@ -1,0 +1,19 @@
+2026-10-26 13:58:36.460: [INFO] CurrentProfilePath: C:\SOA\DOCKERASSIGNMENT\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-10-26 13:58:36.460: [INFO] Profiles total count: 1
+2026-10-26 13:58:36.460: [INFO] Profile: name=Profile 1 path=C:\SOA\DOCKERASSIGNMENT\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=null
+2026-10-26 13:58:36.460: [INFO] LastUsedProfileDir: C:\SOA\DOCKERASSIGNMENT\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-10-26 13:58:36.460: [INFO] OnDoneLoading sync enabled: 0
+2026-10-26 13:58:36.460: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-26 13:58:36.460: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-26 13:58:36.460: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-26 13:58:51.647: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-26 13:58:53.138: [INFO] CurrentProfilePath: C:\SOA\DOCKERASSIGNMENT\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-10-26 13:58:53.138: [INFO] Profiles total count: 1
+2026-10-26 13:58:53.138: [INFO] Profile: name=Profile 1 path=C:\SOA\DOCKERASSIGNMENT\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-10-26T13:58:38.455Z
+2026-10-26 13:58:53.138: [INFO] LastUsedProfileDir: C:\SOA\DOCKERASSIGNMENT\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-10-26 13:58:53.138: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\SOA\DOCKERASSIGNMENT\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-10-26T13:58:38.455Z
+2026-10-26 13:58:53.138: [INFO] OnDoneLoading sync enabled: 0
+2026-10-26 13:58:53.138: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-26 13:58:53.138: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-26 13:58:53.138: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-26 16:56:40.050: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

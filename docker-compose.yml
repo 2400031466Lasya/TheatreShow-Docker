@@ -1,0 +1,54 @@
+
+services:
+  postgresdb:
+    image: postgres:16-alpine
+    container_name: theatreshow-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: theatreshowdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - theatreshow-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d theatreshowdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    image: 2400031466/theatreshow-backend:latest
+    container_name: theatreshow-backend
+    ports:
+      - "2004:2004"
+    environment:
+      SERVER_PORT: 2004
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresdb:5432/theatreshowdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: docker
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      EUREKA_CLIENT_ENABLED: "false"
+    depends_on:
+      postgresdb:
+        condition: service_healthy
+    restart: on-failure
+    networks:
+      - theatreshow-net
+
+  frontend:
+    image: 2400031466/theatreshow-frontend:latest
+    container_name: theatreshow-frontend
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend
+    restart: on-failure
+    networks:
+      - theatreshow-net
+
+volumes:
+  postgres_data:
+
+networks:
+  theatreshow-net:

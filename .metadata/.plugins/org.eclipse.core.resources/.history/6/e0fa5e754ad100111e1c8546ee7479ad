@@ -1,0 +1,38 @@
+package com.klef.soa.exam.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.klef.soa.exam.entity.Theatre;
+import com.klef.soa.exam.repository.TheatreRepository;
+
+@Service
+public class TheatreServiceImpl implements TheatreService {
+
+    @Autowired
+    private TheatreRepository theatreRepository;
+
+    @Override
+    public String addTheatre(TheatreRequest theatre) {
+        theatreRepository.save(theatre);
+        return "Theatre Added Successfully";
+    }
+
+    @Override
+    public List<TheatreRequest> displayAllTheatres() {
+        return theatreRepository.findAll();
+    }
+
+    @Override
+    public String deleteTheatre(long id) {
+
+        if (theatreRepository.existsById(id)) {
+            theatreRepository.deleteById(id);
+            return "Theatre Deleted Successfully";
+        }
+
+        return "Theatre ID Not Found";
+    }
+}

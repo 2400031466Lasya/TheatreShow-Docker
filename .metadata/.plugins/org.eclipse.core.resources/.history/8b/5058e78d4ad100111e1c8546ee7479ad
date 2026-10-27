@@ -1,0 +1,44 @@
+
+package com.klef.soa.exam.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.klef.soa.exam.entity.Theatre;
+import com.klef.soa.exam.service.TheatreService;
+
+@RestController
+@RequestMapping("/theatre")
+
+public class TheatreController
+{
+    @Autowired
+    private TheatreService theatreService;
+
+    @PostMapping("/add")
+    public String addTheatre(@RequestBody TheatreRequest theatre)
+    {
+        return theatreService.addTheatre(theatre);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteTheatre(@PathVariable long id)
+    {
+        return theatreService.deleteTheatre(id);
+    }
+
+    @GetMapping("/displayall")
+    public List<TheatreRequest> displayAllTheatres()
+    {
+        return theatreService.displayAllTheatres();
+    }
+}
+

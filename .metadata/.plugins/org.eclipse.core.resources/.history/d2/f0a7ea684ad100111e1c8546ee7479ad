@@ -1,0 +1,13 @@
+package com.klef.soa.exam.service;
+
+import java.util.List;
+import com.klef.soa.exam.entity.Theatre;
+
+public interface TheatreService
+{
+    public String addTheatre(TheatreRequest theatre);
+
+    public List<TheatreRequest> displayAllTheatres();
+
+    public String deleteTheatre(long id);
+}
